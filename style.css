@@ -1,0 +1,95 @@
+body{
+    margin: 0;
+}
+
+#menu{
+    background-color: lightblue;
+    display: grid;
+    grid-template-columns: auto min-content;
+    grid-template-areas: 
+        "logo menu"
+}
+
+
+#start{display: none;}
+#about{display: none;}
+#contact{display: none;}
+#ham{
+    grid-area: menu; 
+    align-self: center;
+}
+
+#mobile_menu{
+    background-color: white;
+    display: none;
+    position: absolute;
+    top: 54px;
+    right: 0;
+    width: 100%;
+}
+
+#ham_icon{
+    padding: 10px;
+    display: block;
+    width: 30px;
+    height: 44px;
+    object-fit: contain;
+}
+
+#ham:hover #mobile_menu{
+    padding: 10px;
+    display: grid;
+    justify-items: center;
+}
+
+#logo{
+    margin: 10px;
+    width: 40px;
+    border: 2px solid white;
+    border-radius: 4px;
+}
+
+.menu_item{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: x-large;
+    padding: 10px;
+    margin: 5px;
+    width: 150px;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+
+    background-color: lightpink;
+    border-radius: 40px;
+}
+
+/*Desktop*/
+@media (min-width: 700px) {
+    #menu{
+        padding: 10px;
+        background-color: lightblue;
+        display: grid;
+        grid-template-columns: 50% auto auto auto;
+        grid-template-areas: 
+        "logo start about contact"
+    }
+        
+    #menu{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 600;
+        font-size: x-large;
+    }
+
+    #ham{display: none;}
+    #start{grid-area: start;}
+    #about{grid-area: about;}
+    #contact{ grid-area: contact;}
+
+    #start,#about,#contact{
+        display: block; 
+        align-self: center;
+        color: black;
+        text-decoration: none;
+    }
+}
