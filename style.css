@@ -5,9 +5,10 @@ body{
 
 #menu{
     position: fixed;
+    z-index: 1;
     top: 0px;
     width: 100%;
-    background-color: rgb(137, 176, 174);
+    background-color: rgb(103, 218, 212);
     display: grid;
     grid-template-columns: auto min-content;
     grid-template-areas: 
@@ -73,7 +74,6 @@ body{
     grid-template-areas: 
         "intro_text"
         "projekt"
-        "scroll"
         "slide"
         "about_text"
     ;
@@ -81,7 +81,7 @@ body{
 
 #intro_text{
     grid-area: intro_text;
-    padding: 15px 30px 0px 30px;
+    padding: 30px 30px 10px 30px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -97,11 +97,14 @@ body{
     font-weight: bold;
 }
 
+/* ----- Image Slide (Imported From Youtube) ----- */
+
 #slider{
     grid-area: slide;
-    padding-top: 10px;
+    padding-top: 200px;
     overflow: hidden;
-    margin: 30px
+    margin: 30px;
+    bottom: 0px;
 }
 
 #slider figure{
@@ -126,27 +129,61 @@ body{
     70%{left: -200%}
 }
 
+/* ------------ End Of Image Slide ------------ */
+
+
 #about_text{
     grid-area: about_text;
     padding: 0px 30px 0px 30px;
     font-family: 'Roboto', sans-serif;
 }
 
-#about_text h1{
+#about_text h2{
     text-align: center;
     text-decoration: underline;
 }
 
+/* --------- Start scroll icon ---------*/
+
 .scroll{
-    padding-top: 100px;
-    grid-area: scroll;
+    position: fixed;
+    left: 45%;
+    bottom: 0%;
     text-align: center;
+    animation: 5s scroll_ani infinite;
 }
 
 .scroll p{
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    font-size: small
+    font-size: small;
+}
+
+@keyframes scroll_ani {
+    0%{bottom: 0%}
+    25%{bottom: 7px}
+    50%{bottom: 0%}
+    75%{bottom: 7px}
+    100%{bottom: 0%}
+}
+/* --------- End scroll icon ---------*/
+
+#contact_info{
+    padding-top: 200px;
+    padding-bottom: 75px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#contact_info h2{
+    text-align: center;
+    text-decoration: underline;
+}
+
+#contact_info div{
+    justify-self: left;
+    padding: 0px 30px 0px 30px;
+    font-size: 20px;
+    line-height: 30px;        
 }
 
 /*Desktop*/
