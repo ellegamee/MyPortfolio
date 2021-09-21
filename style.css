@@ -1,6 +1,6 @@
 body{
-    padding-top: 50px;
     margin: 0;
+    padding-top: 50px
 }
 
 #menu{
@@ -81,7 +81,8 @@ body{
 
 #intro_text{
     grid-area: intro_text;
-    padding: 30px 30px 10px 30px;
+    padding: 10px 30px 10px 30px;
+    scroll-margin-top: 100px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -100,6 +101,7 @@ body{
 /* ----- Image Slide (Imported From Youtube) ----- */
 
 #slider{
+    scroll-margin-top: -120px;
     grid-area: slide;
     padding-top: 200px;
     overflow: hidden;
